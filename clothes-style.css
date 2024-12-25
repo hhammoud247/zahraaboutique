@@ -1,0 +1,92 @@
+body{
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px;
+    background-color: #dba7a8;
+}
+
+/* This is the container where the items will be placed. */
+#product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the grid */
+}
+
+/* Styles for each product card */
+.product-container{
+    width: 100%;
+    max-width: 400px; /* Max width for product cards */
+    text-align: center;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgb(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image styles */
+.product-image{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Cart icon style */
+.cart-icon{
+    height: auto;
+    width: 50px;
+}
+
+/* Title and price input styles */
+.product-title-input{
+    font-size: 24px;
+    margin: 15px 0;
+    width: 100%;
+}
+
+/* Controls layout */
+.product-controls{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Quantity input layout */
+.quantity-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Dropdown style */
+.dropdown{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add to cart button styles */
+.add-to-cart-button{
+    padding: 5px 15px;
+    font-size: 15px;
+    color: rgb(249, 246, 246);
+    background-color: gold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+    background-color: darkgoldenrod;
+}
+

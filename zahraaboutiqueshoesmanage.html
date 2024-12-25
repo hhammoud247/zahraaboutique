@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Page - Add Items</title>
+    <style>
+        /* Style here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .manager-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .image-preview {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .reset{
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            background-color: #fc0b43;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="manager-container">
+        <h1>Manage Products</h1>
+        <form id="productForm">
+            <!-- Image Upload -->
+            <div class="form-group">
+                <label for="imageUpload">Upload Image</label>
+                <input type="file" id="imageUpload" accept="image/*" required>
+                <img id="imagePreview" class="image-preview" style="display:none;" alt="Image Preview">
+            </div>
+
+            <!-- Title Input -->
+            <div class="form-group">
+                <label for="title">Product Title</label>
+                <input type="text" id="title" required>
+            </div>
+
+            <!-- Price Input -->
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" id="price" required>
+            </div>
+
+            <!-- Size Dropdown -->
+            <div class="form-group">
+                <label for="size">Choose Size</label>
+                <select id="size" required>
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                    <option value="XL">Extra Large</option>
+                </select>
+            </div>
+
+            <button type="submit" class="submit-button">Add Product</button>
+            <button onclick="reset_button()" class="reset"> Reset Page</button>
+        </form>
+    </div>
+
+    <script src="zahraashoes.js"></script>
+
+</body>
+</html>
